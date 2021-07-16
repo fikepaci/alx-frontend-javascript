@@ -1,3 +1,4 @@
+// Promise is handle or not
 function handleResponseFromAPI(promise) {
   return Promise.then(() => ({
     status: 200,
