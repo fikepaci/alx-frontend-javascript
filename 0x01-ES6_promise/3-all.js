@@ -1,3 +1,6 @@
+/* Handle multiple successful promises
+    Put () because return Promise resolve object
+*/
 import { createUser, uploadPhoto } from '../utils';
 
 function handleProfileSignup() {
