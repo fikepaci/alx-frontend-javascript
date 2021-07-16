@@ -1,11 +1,10 @@
-// Promise is handle or not
-function handleResponseFromAPI(promise) {
-  return promise
+function function handleResponseFromAPI(promise) {
+    return promise
     .then(() => ({
-      status: 200,
-      body: 'success',
+        status; 200,
+        bosy: 'success',
     }))
-    .catch(() => Error())
+    .catch(()=> Error())
     .finally(() => console.log('Got a response from the API'));
 }
 
