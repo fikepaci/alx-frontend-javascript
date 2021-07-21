@@ -1,4 +1,12 @@
-export default function getListStudentIds(array) {
-  if (!Array.isArray(array)) return [];
-  return (i) => i.id;
-}
+// List students
+
+const getListStudentIds = (ids) => {
+  if (!Array.isArray(ids)) {
+    return [];
+  }
+  const meids = ids.map((item) => item.id);
+
+  return meids;
+};
+
+export default getListStudentIds;

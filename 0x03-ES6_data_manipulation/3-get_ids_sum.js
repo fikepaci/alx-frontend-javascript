@@ -1,3 +1,5 @@
+// Use reduce ids sum
+
 const getStudentIdsSum = (students) => {
   const all = students
     .map((student) => student.id)
