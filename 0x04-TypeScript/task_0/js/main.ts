@@ -1,14 +1,34 @@
 interface Student {
-  firstName?: string;
-  lastName?: string;
-  age?: number;
-  location?: string;
+  firstName: string;
+  lastName: string;
+  age: number;
+  location: string;
 }
 
-var student_1: string = "John petel";
-var student_2: string = "pacifique irakoze";
+const studentOne: Student = {
+  firstName: "Macato",
+  lastName: "Malxom",
+  age: 22,
+  location: "Here",
+};
 
-var studentsList: string[];
-studentsList = [student_1, student_2];
+const studentTwo: Student = {
+  firstName: "Matxa",
+  lastName: "Boss",
+  age: 23,
+  location: "There",
+};
 
-console.log(studentsList[0]);
+const studentsList: Array<Student> = [studentOne, studentTwo];
+const table: HTMLTableElement = document.createElement("table");
+const tBody: HTMLTableSectionElement = table.createTBody();
+
+studentsList.forEach((student) => {
+  const row: HTMLTableRowElement = tBody.insertRow();
+  const rowFirstName: HTMLTableCellElement = row.insertCell();
+  const rowLocation: HTMLTableCellElement = row.insertCell();
+  rowFirstName.innerHTML = student.firstName;
+  rowLocation.innerHTML = student.location;
+});
+
+document.body.appendChild(table);
